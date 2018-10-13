@@ -1,16 +1,27 @@
 <!DOCTYPE html>
   <html>
-    <head>
+  <head>
       <style>
-        button {
-          height: 40px;
-          width: 90px;
-          outline: none;
+        .button{
+          background-color: #4ACAA8;
+          font-size: 20px;
+          padding: 10px 24px;
+          color: black;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+        .button:hover {background-color: #4ACAA8}
+        .button:active {
+          background-color: ##4ACAA8;
+          box-shadow: 0 5px #666;
+          transform: translateY(4px);
         }
       </style>
     </head>
     <body>
-      <button id="parseTOS">This TOS is too long!</button>
+      <h1 style="font-family:'Trebuchet MS'">2Scan<h1>
+      <button class="button start">This TOS is too long!</button>
       <script src="window.js"></script>
     </body>
   </html>
