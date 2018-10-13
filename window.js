@@ -1,4 +1,15 @@
-function test() {
-  alert("hello");
+function postData(input) {
+    $.ajax({
+        type: "POST",
+        url: "~/script.py",
+        data: { param: input },
+        success: callbackFunc
+    });
 }
-document.getElementById("button").onclick = function() {test()}
+
+function callbackFunc(response) {
+    // do something with the response
+    console.log(response);
+}
+
+document.getElementById("button").onclick = function() {postData(window.location.href)}
