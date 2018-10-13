@@ -5,7 +5,7 @@
   of Service so you know exactly what you're getting into before Agreeing.",
   "version": "1.0",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "logoBig.png",
     "default_popup": "window.html"
   },
   "permissions": []

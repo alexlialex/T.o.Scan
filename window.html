@@ -2,17 +2,19 @@
   <html>
   <head>
       <style>
-        .button{
+        input[type=button]{
           background-color: #4ACAA8;
           font-size: 20px;
           padding: 10px 24px;
           color: black;
           text-align: center;
           cursor: pointer;
-          border-radius: 15px;
+          border-radius: 5px;
+          height: 50px;
+          width: 250px;
         }
-        .button:hover {background-color: #4ACAA8}
-        .button:active {
+        input[type=button] {background-color: #4ACAA8}
+        input[type=button]{
           background-color: ##4ACAA8;
           box-shadow: 0 5px #666;
           transform: translateY(4px);
@@ -21,7 +23,7 @@
     </head>
     <body>
       <h1 style="font-family:'Trebuchet MS'">2Scan<h1>
-      <button class="button start">This TOS is too long!</button>
-      <script src="window.js"></script>
+      <input type="button" id="button" value="This TOS is too long!"></input>
+      <script src = "window.js"></script>
     </body>
   </html>
