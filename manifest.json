@@ -8,5 +8,10 @@
     "default_icon": "logoBig.png",
     "default_popup": "window.html"
   },
-  "permissions": []
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/"
+  ]
 }

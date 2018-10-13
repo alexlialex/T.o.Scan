@@ -1,15 +1,17 @@
-function postData(input) {
+// TODO: Recieve the python output and output the HTML file
+document.getElementById("buttonscan").onclick = function() {myFunction()};
+
+function myFunction() {
+  $('#form').on('submit', function(e){
+    e.preventDefault();
     $.ajax({
-        type: "POST",
-        url: "~/script.py",
-        data: { param: input },
-        success: callbackFunc
-    });
+      url: 'http://127.0.0.1:5000/urlStuff/',
+      data: {'htmldata': htmldata},
+      method: 'POST',
+      success: function(data) {
+        $('p').html();
+      }
+    })
+  })
+  document.getElementById("testtt").innerHTML = "YOU CLICKED ME!";
 }
-
-function callbackFunc(response) {
-    // do something with the response
-    console.log(response);
-}
-
-document.getElementById("button").onclick = function() {postData(window.location.href)}
