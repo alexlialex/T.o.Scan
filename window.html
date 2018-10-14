@@ -2,7 +2,7 @@
   <html>
   <head>
       <style>
-        input[type=button]{
+        input[type=submit]{
           background-color: #4ACAA8;
           font-size: 20px;
           padding: 10px 24px;
@@ -13,8 +13,8 @@
           height: 50px;
           width: 250px;
         }
-        input[type=button] {background-color: #4ACAA8}
-        input[type=button]{
+        input[type=submit] {background-color: #4ACAA8}
+        input[type=submit]{
           background-color: ##4ACAA8;
           box-shadow: 0 5px #666;
           transform: translateY(4px);
@@ -23,9 +23,13 @@
     </head>
     <body>
       <h1 style="font-family:'Trebuchet MS'">2Scan<h1>
-      <input type="button" id="buttonscan" value="Click 2Scan"></input>
+      <form id="form" method="post" name="form">
+        URL<br>
+        <input type="text" name="urllink"><br></input>
+        <input type="submit" id="buttonscan" value="Click 2Scan"></input>
+      </form>
+
       <h1 id="testtt">aside</h1>
-      <p>hiiiii</p>
       <script src="jquery.min.js"></script>
       <script src="window.js"></script>
     </body>

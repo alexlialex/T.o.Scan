@@ -2,16 +2,25 @@
 document.getElementById("buttonscan").onclick = function() {myFunction()};
 
 function myFunction() {
+  //chrome.extension.getBackgroundPage().console.log('foo');
   $('#form').on('submit', function(e){
     e.preventDefault();
     $.ajax({
-      url: 'http://127.0.0.1:5000/urlStuff/',
-      data: {'htmldata': htmldata},
-      method: 'POST',
-      success: function(data) {
-        $('p').html();
+      type : 'POST',
+      url : 'http://127.0.0.1:5000/urlStuff',
+      contentType: "application/json",
+      dataType: "text",
+      data : JSON.stringify(
+          {'urllink': 'https://www.apple.com/legal/internet-services/terms/site.html'}
+      ),
+      success : function(data) {
+        document.getElementById("testtt").innerHTML = "YOU PRESSED ME";
+        console.log(data);
+      },
+      error : function(data){
+        document.getElementById("testtt").innerHTML = "CANNOT GET DATA";
       }
     })
   })
-  document.getElementById("testtt").innerHTML = "YOU CLICKED ME!";
+
 }
