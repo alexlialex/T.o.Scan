@@ -14,7 +14,7 @@ function myFunction() {
           {'urllink': 'https://www.apple.com/legal/internet-services/terms/site.html'}
       ),
       success : function(data) {
-        document.getElementById("testtt").innerHTML = "YOU PRESSED ME";
+        document.getElementById("testtt").innerHTML = "SUMMARY COMPILED";
         console.log(data);
       },
       error : function(data){
